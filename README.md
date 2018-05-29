@@ -14,13 +14,13 @@ Gunicorn + Flask.
 2. Download [automated build](https://registry.hub.docker.com/u/danriti/gunicorn-flask/) from public [Docker Hub Registry](https://registry.hub.docker.com/):
 
 ```bash
-docker pull mzager/gunicorn-flask
+docker pull mzager/gunicorn-flask-fargate
 ```
 
 ### Docker Usage
 
 ```bash
-docker run -d -P mzager/gunicorn-flask
+docker run -d -P mzager/gunicorn-flask-fargate
 ```
 
 After few seconds, open `http://<host>:<port>` to see the Flask app.
