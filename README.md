@@ -1,7 +1,7 @@
-## gunicorn-flask
+## gunicorn-flask-fargate
 
 This repository contains files necessary for building a Docker image of
-Gunicorn + Flask.
+Gunicorn + Flask + Fargate.
 
 ### Base Docker Image
 
@@ -21,6 +21,12 @@ docker pull mzager/gunicorn-flask-fargate
 
 ```bash
 docker run -d -P mzager/gunicorn-flask-fargate
+```
+
+## Local Usage
+
+```bash
+docker run -p 5000:5000 -it <image> /bin/bash
 ```
 
 After few seconds, open `http://<host>:<port>` to see the Flask app.
