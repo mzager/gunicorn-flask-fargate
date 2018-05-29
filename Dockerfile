@@ -6,9 +6,7 @@ MAINTAINER Michael Zager <michael@zager.co>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y python3 python3-dev python3-pip python3-venv python3-wheel gunicorn
-
-#python3.6 python3.6-dev python3-pip python3-virtualenv gunicorn
+RUN apt-get install -y python3 python3-dev python3-pip python3-venv python3-wheel gunicorn3
 
 # Setup flask application
 RUN mkdir -p /deploy/app
