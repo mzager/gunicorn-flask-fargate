@@ -1,7 +1,7 @@
 """ main.py """
 import os.path
-import flask
-# from flask import Flask
+# import flask
+from flask import Flask
 from flask_cors import CORS
 
 import os.path
@@ -701,7 +701,7 @@ def manifold_sk_quadradicdiscriminantanalysis(content):
     }, ignore_nan=True ))
 
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 CORS(app)
 
 @app.route('/ping', methods=['GET'])
@@ -709,7 +709,7 @@ def ping():
     """Determine if the container is working and healthy. In this sample container, we declare
     it healthy if we can load the model successfully."""
     status = 200 
-    return flask.Response(response='\n', status=status, mimetype='application/json')
+    return Response(response='\n', status=status, mimetype='application/json')
 
 
 @app.route('/py', methods=['GET', 'POST'])
